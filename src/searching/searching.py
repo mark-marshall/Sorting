@@ -30,10 +30,10 @@ def binary_search(arr, target):
 
 # STRETCH: write a recursive implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
-  # find midpoint
-  mp = (low + high) // 2
   if len(arr) == 0:
     return -1 # array empty
+  # find midpoint
+  mp = (low + high) // 2
   # implement similar logic to iterative implementation
   if arr[mp] == target:
     return mp
