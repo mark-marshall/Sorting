@@ -1,8 +1,8 @@
 # STRETCH: implement Linear Search				
 def linear_search(arr, target):
-  
-  # TO-DO: add missing code
-
+  for i in range(0, len(arr) - 1):
+    if arr[i] == target:
+      return i
    return -1   # not found
 
 
