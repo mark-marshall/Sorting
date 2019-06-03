@@ -5,10 +5,10 @@ def selection_sort( arr ):
         cur_index = i
         smallest_index = cur_index
         # loop through the elements in the unsorted part of the list
-        for j in range(smallest_index, len(arr))
+        for j in range(smallest_index, len(arr)):
         # iterate until the index of the smallest element is found
-        if arr[smallest_index] > arr[j]:
-            smallest_index = j
+            if arr[smallest_index] > arr[j]:
+                smallest_index = j
         # swap the first element in the unsorted list with the smallest 
         # element in the remainder of the list
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
