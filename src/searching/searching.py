@@ -14,6 +14,7 @@ def binary_search(arr, target):
   high = len(arr)-1
   # loop while low remains smaller than high
   while low <= high:
+    # find midpoint
     mp = (low + high) // 2
     # if the el matches return the index
     if arr[mp] == target:
@@ -29,9 +30,14 @@ def binary_search(arr, target):
 
 # STRETCH: write a recursive implementation of Binary Search 
 def binary_search_recursive(arr, target, low, high):
-  
-  middle = (low+high)//2
-
+  # find midpoint
+  mp = (low + high) // 2
   if len(arr) == 0:
     return -1 # array empty
-  # TO-DO: add missing if/else statements, recursive calls
+  # implement similar logic to iterative implementation
+  if arr[mp] == target:
+    return mp
+  elif arr[mp] > target:
+    return binary_search_recursive(arr, target, low, mp)
+  else:
+    return binary_search_recursive(arr, target, mp, high)
